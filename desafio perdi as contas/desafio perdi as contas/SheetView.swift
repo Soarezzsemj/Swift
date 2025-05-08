@@ -8,39 +8,63 @@
 import SwiftUI
 
 struct SheetView: View {
-    @StateObject var vm = ViewModel()
-    var recebe =  carros(modelo: "teste", ano: 2, cor: "teste", preco: 2.2, foto: "teste")
-
+    
+    @Binding var recebe :  carros
+    
     var body: some View {
         ZStack {
-            ForEach(vm.estacionamento, id: \.self) { park in
-                VStack(alignment: .leading) {
-                    Text(park.nomeEstacionamento)
-                        .font(.headline)
-                    
-                    ForEach(park.carros, id: \.self) { carro in
-                        Text("Modelo: \(carro.modelo)")
-                        Text("ano: \(carro.ano)")
-                        AsyncImage(url: URL(string:carro.foto)){ image in
-                          image
-                            .resizable()
-                   .aspectRatio(contentMode: .fit)
-                            } placeholder: {
-                                       // Adicione aqui um placeholder de sua escolha
-                               Color.gray
-                                                }
-                                            .frame(width: 200, height: 200)
-                       
-                    }
+            Color.gray
+            .ignoresSafeArea()
+            VStack(alignment: .leading) {
+               
+                Text("Modelo: \(recebe.modelo)")
+                .font(.system(size: 30))
+                .foregroundColor(.white)
+                .bold()
+                .padding(10)
+               
+                Text("Cor:\(recebe.cor)")
+                    .font(.system(size: 30))
+                    .foregroundColor(.white)
+                    .padding(10)
+                Text("Ano: \(recebe.ano)")
+                    .font(.system(size: 30))
+                    .foregroundColor(.white)
+                    .padding(10)
+                Text("Preço: \(recebe.preco)R$")
+                    .font(.system(size: 30))
+                    .foregroundColor(.white)
+                    .padding(10)
+                
+
+                
+                
+                
+                
+                AsyncImage(url: URL(string:recebe.foto)){ image in image
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        
                 }
+            placeholder: {
+                // Adicione aqui um placeholder de sua escolha
+                Color.gray
+                .frame(width: 200, height: 200)
+                
+                
+                }
+            .padding(10)
+            Spacer()
+           
             }
-        }
-        .onAppear {
-            vm.fetch()
+            
         }
     }
 }
 
+
 #Preview {
     ContentView()
 }
+
+

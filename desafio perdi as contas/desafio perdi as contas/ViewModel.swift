@@ -10,6 +10,7 @@ import Foundation
 
 class ViewModel: ObservableObject {
     @Published var estacionamento: [Park] = []
+    
     func fetch() {
         guard let url = URL(string: "http://127.0.0.1:1880/leitura") else{
             return
