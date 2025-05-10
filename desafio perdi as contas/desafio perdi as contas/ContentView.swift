@@ -11,8 +11,7 @@ struct ContentView: View {
     @State private var puxarsheet = false
     @StateObject var vm = ViewModel()
     
-    @State var car : carros = carros(modelo: "", ano: 0, cor: "", preco: 0.0, foto: "")
-
+    @State var car : carros = carros(modelo: "", dono: "", ano: "", video: "", cor: "", preco: 0.0, foto: "")
     var body: some View {
         ZStack {
             Color.gray
@@ -34,10 +33,7 @@ struct ContentView: View {
        .onTapGesture {
            car = carro
           puxarsheet.toggle()
-            }
-      
-                        
-                       
+                        }
                     }
                 }
             }

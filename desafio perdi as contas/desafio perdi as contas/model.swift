@@ -15,7 +15,9 @@ struct Park : Decodable,Hashable {
 
 struct carros : Decodable, Hashable {
     let modelo : String
-    let ano : Int
+    let dono : String
+    let ano : String
+    let video : String
     let cor : String
     let preco : Double
     let foto : String

@@ -6,10 +6,11 @@
 //
 
 import SwiftUI
+import AVKit
 
 struct SheetView: View {
     
-    @Binding var recebe :  carros
+    @Binding var recebe : carros
     
     var body: some View {
         ZStack {
@@ -22,6 +23,10 @@ struct SheetView: View {
                 .foregroundColor(.white)
                 .bold()
                 .padding(10)
+                Text("Proprietario:\(recebe.dono)")
+                    .font(.system(size: 30))
+                    .foregroundColor(.white)
+                    .padding(10)
                
                 Text("Cor:\(recebe.cor)")
                     .font(.system(size: 30))
@@ -31,18 +36,16 @@ struct SheetView: View {
                     .font(.system(size: 30))
                     .foregroundColor(.white)
                     .padding(10)
-                Text("Preço: \(recebe.preco)R$")
+                Text("Preço: \(recebe.preco, specifier: "%.3f")R$")
                     .font(.system(size: 30))
                     .foregroundColor(.white)
                     .padding(10)
-                
-
-                
-                
-                
+                VideoPlayer(player: AVPlayer(url:  URL(string: recebe.video)!))
+                    .frame(height: 400)
                 
                 AsyncImage(url: URL(string:recebe.foto)){ image in image
                         .resizable()
+                        .cornerRadius(10)
                         .aspectRatio(contentMode: .fit)
                         
                 }
@@ -54,9 +57,11 @@ struct SheetView: View {
                 
                 }
             .padding(10)
+            
             Spacer()
            
             }
+            
             
         }
     }
