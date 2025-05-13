@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		047892942DD2A77A0089E566 /* VideoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047892932DD2A77A0089E566 /* VideoView.swift */; };
 		04F397B12DCC24070001D653 /* desafio_perdi_as_contasApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F397B02DCC24070001D653 /* desafio_perdi_as_contasApp.swift */; };
 		04F397B32DCC24070001D653 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F397B22DCC24070001D653 /* ContentView.swift */; };
 		04F397B52DCC24090001D653 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04F397B42DCC24090001D653 /* Assets.xcassets */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		047892932DD2A77A0089E566 /* VideoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoView.swift; sourceTree = "<group>"; };
 		04F397AD2DCC24070001D653 /* desafio perdi as contas.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "desafio perdi as contas.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		04F397B02DCC24070001D653 /* desafio_perdi_as_contasApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = desafio_perdi_as_contasApp.swift; sourceTree = "<group>"; };
 		04F397B22DCC24070001D653 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -64,6 +66,7 @@
 				04F397BE2DCC24BF0001D653 /* model.swift */,
 				04F397C02DCC24D10001D653 /* ViewModel.swift */,
 				04F397C82DCC35790001D653 /* SheetView.swift */,
+				047892932DD2A77A0089E566 /* VideoView.swift */,
 			);
 			path = "desafio perdi as contas";
 			sourceTree = "<group>";
@@ -146,6 +149,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				047892942DD2A77A0089E566 /* VideoView.swift in Sources */,
 				04F397B32DCC24070001D653 /* ContentView.swift in Sources */,
 				04F397BF2DCC24BF0001D653 /* model.swift in Sources */,
 				04F397C92DCC35790001D653 /* SheetView.swift in Sources */,
